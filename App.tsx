@@ -353,7 +353,7 @@ const App: React.FC = () => {
 
       <div className="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-20 border border-white/10 shadow-2xl space-y-10 md:space-y-16">
         <p className="text-xl md:text-3xl font-display text-white leading-relaxed text-center">
-          ICEBERG COSMOS 2025 is a flagship multi-event technical initiative organized by the <span className="text-sky-400 font-bold">IE(I) Student Chapter</span>, Department of Information Technology, RCC Institute of Information Technology, in collaboration with <span className="text-indigo-400 font-bold">IIC</span> and <span className="text-purple-400 font-bold">CHS</span>.
+          ICEBERG COSMOS 2025 is a flagship multi-event technical initiative organized by the <span className="text-sky-400 font-bold">IE(I) Student Chapter</span>, Department of Information Technology, RCC Institute of Information Technology, in collaboration with <span className="text-indigo-400 font-bold">IIC RCCIIT</span> and <span className="text-purple-400 font-bold">CHS</span>.
         </p>
         
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
