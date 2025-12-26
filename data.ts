@@ -15,9 +15,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
   { id: 'o2', name: 'Vageesha Kriti', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Vageesha.jpeg' },
   
   // Co-Organizers
-  { id: 'co1', name: 'IIC Coordinator', role: 'Innovation Council', category: 'co-organizers', avatarIcon: '👤' },
-  { id: 'co2', name: 'CHS Representative', role: 'Cultural Heritage Society', category: 'co-organizers', avatarIcon: '👤' },
-  { id: 'co3', name: 'Departmental Faculty', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  { id: 'co1', name: 'Subhadeb Mitra', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  { id: 'co2', name: 'Santanu Shrivastava', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  { id: 'co3', name: 'Sayantan Roy', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  { id: 'co4', name: 'Shruti Gupta ', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  { id: 'co5', name: 'Md Talha Ali', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
 
   // Core Team
   { id: 'ct1', name: 'Arka Pratim Das', role: 'TECHNICAL HEAD', category: 'core', avatarIcon: '👤', image: '/Arka.jpeg' },
