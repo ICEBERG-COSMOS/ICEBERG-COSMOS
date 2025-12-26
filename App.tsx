@@ -208,7 +208,7 @@ const SplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
           <div className="flex items-center justify-center gap-4">
              <div className="h-[1px] w-8 md:w-20 bg-sky-500/30" />
              <p className="text-[11px] md:text-base font-stylish font-semibold tracking-[0.6em] text-slate-400 uppercase">
-                IN COLLABORATION WITH <span className="text-white">IIC</span> AND <span className="text-white">CHS</span>
+                IN COLLABORATION WITH <span className="text-white">IIC RCCIIT</span> AND <span className="text-white">CHS</span>
              </p>
              <div className="h-[1px] w-8 md:w-20 bg-sky-500/30" />
           </div>
@@ -279,9 +279,9 @@ const App: React.FC = () => {
       <div className="space-y-6 md:space-y-8 text-base md:text-2xl text-slate-200 leading-relaxed font-light max-w-4xl mx-auto backdrop-blur-md bg-slate-950/50 p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
         <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both font-display">
           ICEBERG COSMOS 2025 is a flagship multi-event technical initiative organized by the 
-          <span className="text-sky-400 font-medium"> IE(I) Students’ Chapter</span>, 
+          <span className="text-sky-400 font-medium"> IE(I) Student Chapter</span>, 
           Dept. of IT, RCCIIT, in collaboration with 
-          <span className="text-indigo-400 font-medium"> IIC</span> and <span className="text-purple-400 font-medium">CHS</span>.
+          <span className="text-indigo-400 font-medium"> IIC RCCIIT</span> and <span className="text-purple-400 font-medium">CHS</span>.
         </p>
       </div>
     </section>
@@ -334,7 +334,7 @@ const App: React.FC = () => {
               ICEBERG COSMOS 2025 establishes a <span className="text-sky-400">structured, year-wise technical growth pipeline</span>.
              </p>
              <p className="text-sm md:text-xl text-slate-300 font-light font-display">
-               Strengthening preparation for <span className="text-white font-medium">SBH – Smart Bengal Hackathon</span>.
+               Strengthening preparation for <span className="text-white font-medium">SBH – Smart Bengal Hackathon and also Placement Advantage</span>.
              </p>
            </div>
          </div>
@@ -353,7 +353,7 @@ const App: React.FC = () => {
 
       <div className="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-20 border border-white/10 shadow-2xl space-y-10 md:space-y-16">
         <p className="text-xl md:text-3xl font-display text-white leading-relaxed text-center">
-          ICEBERG COSMOS 2025 is a flagship multi-event technical initiative organized by the <span className="text-sky-400 font-bold">IE(I) Students’ Chapter</span>, Department of Information Technology, RCC Institute of Information Technology, in collaboration with <span className="text-indigo-400 font-bold">IIC</span> and <span className="text-purple-400 font-bold">CHS</span>.
+          ICEBERG COSMOS 2025 is a flagship multi-event technical initiative organized by the <span className="text-sky-400 font-bold">IE(I) Student Chapter</span>, Department of Information Technology, RCC Institute of Information Technology, in collaboration with <span className="text-indigo-400 font-bold">IIC</span> and <span className="text-purple-400 font-bold">CHS</span>.
         </p>
         
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
@@ -367,7 +367,7 @@ const App: React.FC = () => {
             
             <div className="flex flex-col items-center gap-4 md:gap-6 group">
                <LogoSlot size="w-24 h-24 md:w-40 md:h-40" src="IIC.jpeg" className="group-hover:border-sky-500 transition-all duration-500" />
-               <span className="text-white font-stylish font-bold tracking-widest text-base md:text-lg">IIC</span>
+               <span className="text-white font-stylish font-bold tracking-widest text-base md:text-lg">IIC RCCIIT</span>
                <div className="h-0.5 w-0 group-hover:w-full bg-sky-500 transition-all duration-500" />
             </div>
 
