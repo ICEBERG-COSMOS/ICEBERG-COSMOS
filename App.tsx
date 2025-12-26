@@ -654,7 +654,7 @@ const App: React.FC = () => {
 
                 <div className="p-8 border-t border-white/10" style={{ backgroundColor: '#000000' }}>
                   <p className="text-[10px] text-slate-500 font-mono-tech tracking-widest uppercase mb-1">Organized by</p>
-                  <p className="text-xs text-white font-bold uppercase tracking-widest">IE(I) Students' Chapter</p>
+                  <p className="text-xs text-white font-bold uppercase tracking-widest">IE(I) Student Chapter</p>
                 </div>
               </div>
             </div>
@@ -681,8 +681,8 @@ const App: React.FC = () => {
               </div>
               
               <div className="text-slate-400 text-sm text-center leading-loose">
-                Organized by <span className="text-white font-medium">IE(I) Students' Chapter</span>, Dept. of IT <br />
-                In collaboration with <span className="text-white font-medium">IIC</span> & <span className="text-white font-medium">CHS</span> <br />
+                Organized by <span className="text-white font-medium">IE(I) Student Chapter</span>, Dept. of IT <br />
+                In collaboration with <span className="text-white font-medium">IIC RCCIIT</span> & <span className="text-white font-medium">CHS</span> <br />
                 © 2025 RCC Institute of Information Technology.
               </div>
 
