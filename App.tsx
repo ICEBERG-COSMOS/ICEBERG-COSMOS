@@ -118,10 +118,6 @@ const Snowfall: React.FC = () => {
   );
 };
 
-/**
- * Simple, direct LogoImage component.
- * It uses the provided filename directly as the src, as they are confirmed to be in the root directory.
- */
 const LogoImage: React.FC<{ className?: string; src?: string }> = ({ 
   className = "w-full h-full object-contain p-0",
   src = "/IEI.jpeg"
@@ -153,15 +149,12 @@ const TriangularLogos: React.FC<{ className?: string }> = ({ className = "" }) =
         strokeDasharray="4 2" 
       />
     </svg>
-    {/* TOP: IEI.jpeg */}
     <div className="absolute top-0 left-1/2 -translate-x-1/2">
       <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="/IEI.jpeg" />
     </div>
-    {/* BOTTOM LEFT: IIC.jpeg */}
     <div className="absolute bottom-0 left-0">
       <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="/IIC.jpeg" />
     </div>
-    {/* BOTTOM RIGHT: CHS.jpeg */}
     <div className="absolute bottom-0 right-0">
       <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="/CHS.jpeg" />
     </div>
@@ -345,7 +338,6 @@ const App: React.FC = () => {
 
   const renderAboutView = () => (
     <div className="animate-in fade-in slide-in-from-bottom-10 duration-700 max-w-6xl mx-auto pt-10 md:pt-20 px-4">
-      {/* Title section adjusted for mobile font sizes */}
       <div className="text-center mb-10 md:mb-20">
         <h2 className="text-5xl md:text-9xl font-stylish font-black mb-4 tracking-tighter uppercase italic text-white glow-text">ABOUT</h2>
         <div className="h-1 w-20 md:w-24 bg-sky-500 mx-auto rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
@@ -385,7 +377,6 @@ const App: React.FC = () => {
 
   const renderEventsView = () => (
   <div className="animate-in fade-in slide-in-from-bottom-10 duration-700 max-w-6xl mx-auto pt-10 md:pt-20 px-4">
-    {/* Title Section: Smaller on mobile (text-5xl) */}
     <div className="text-center mb-10 md:mb-20">
       <h2 className="text-5xl md:text-9xl font-stylish font-black mb-4 tracking-tighter uppercase italic text-white glow-text">EVENTS</h2>
       <div className="h-1 w-20 md:w-24 bg-sky-500 mx-auto rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
@@ -484,28 +475,30 @@ const App: React.FC = () => {
         ))}
       </div>
 
-      {/* GRID: 1 col (mobile) -> 2 col (tablet) -> 3 col (laptop) -> 4 col (desktop) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 mb-16">
         {currentMembers.map((member) => (
           <div 
             key={member.id} 
             className="group glass-card rounded-3xl p-8 border border-white/10 hover:border-sky-500/50 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
           >
-            {/* PHOTO FRAME (Matches your original square style) */}
-            <div className="w-24 h-24 rounded-2xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-4xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-3xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-6xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
               {member.image ? (
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               ) : (
-                member.avatarIcon || '👤'
+                <span className="flex items-center justify-center">
+                  {member.avatarIcon || '👤'}
+                </span>
               )}
             </div>
             
             <h4 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">{member.name}</h4>
             <p className="text-slate-400 font-mono-tech text-xs uppercase tracking-widest group-hover:text-slate-200 transition-colors">{member.role}</p>
             
-            {/* SOCIAL LINKS (Using your original SVGs) */}
             <div className="mt-8 flex gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-               {/* Instagram/LinkedIn links as defined before */}
             </div>
           </div>
         ))}
@@ -538,7 +531,6 @@ const App: React.FC = () => {
 
   const renderMissionView = () => (
   <div className="animate-in fade-in slide-in-from-bottom-10 duration-700 max-w-6xl mx-auto pt-10 md:pt-20 px-4 min-h-[70vh] flex flex-col justify-center">
-    {/* Header: Scaled for mobile */}
     <div className="text-center mb-10 md:mb-20">
       <h2 className="text-5xl md:text-9xl font-stylish font-black mb-4 tracking-tighter uppercase italic text-white glow-text">MISSION</h2>
       <div className="h-1 w-20 md:w-24 bg-sky-500 mx-auto rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
@@ -593,7 +585,6 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <nav className="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/10 bg-slate-950/80">
-            {/* Left: Logo Area */}
             <div className="flex items-center gap-3 cursor-pointer z-[70]" onClick={() => { setView('home'); setIsMenuOpen(false); }}>
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-sky-500/20 shadow-lg">
                 <LogoImage src="ICEBERG.jpeg" />
