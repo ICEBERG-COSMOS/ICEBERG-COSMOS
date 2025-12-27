@@ -481,7 +481,7 @@ const App: React.FC = () => {
             key={member.id} 
             className="group glass-card rounded-3xl p-8 border border-white/10 hover:border-sky-500/50 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
           >
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-3xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-6xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
+            <div className="w-48 h-48 md:w-48 md:h-48 rounded-3xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-6xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
               {member.image ? (
                 <img
                   src={member.image}
