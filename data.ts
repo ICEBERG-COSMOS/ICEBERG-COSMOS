@@ -36,4 +36,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   { id: 'ct11', name: 'Surajit Nayak', role: 'Event Volunteer', category: 'core', avatarIcon: '👤' },
   { id: 'ct12', name: 'Trisha Chakrabarti', role: 'Event Volunteer', category: 'core', avatarIcon: '👤' },
   { id: 'ct13', name: 'Ayesha Parvin', role: 'Event Volunteer', category: 'core', avatarIcon: '👤' },
+  { id: 'ct14', name: 'Eshika Saha', role: 'Event Volunteer', category: 'core', avatarIcon: '👤', image: '/Eshika.JPG' },
+  { id: 'ct15', name: 'Srijoyni Mukherjee', role: 'Event Volunteer', category: 'core', avatarIcon: '👤', image: '/Srijoyni.jpeg' },
+  { id: 'ct16', name: 'Ankan Paul', role: 'Event Volunteer', category: 'core', avatarIcon: '👤' },
 ];
