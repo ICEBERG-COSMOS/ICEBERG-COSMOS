@@ -15,19 +15,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
   { id: 'o2', name: 'Vageesha Kriti', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Vageesha.jpeg' },
   
   // Co-Organizers
-<<<<<<< HEAD
   { id: 'co1', name: 'Subhadeb Mitra', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Subhadeb.jpeg' },
-  { id: 'co3', name: 'Arka Pratim Das', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Arka.jpeg' },
-  { id: 'co4', name: 'Shruti Gupta ', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Shruti.jpg' },
-  { id: 'co5', name: 'Sayantan Roy', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Sayantan.jpg' },
-=======
-  { id: 'co1', name: 'Subhadeb Mitra', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
-  
-  { id: 'co3', name: 'Arka Pratim Das', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Arka.jpeg' },
-  { id: 'co4', name: 'Shruti Gupta ', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
-  { id: 'co5', name: 'Sayantan Roy', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
-  
->>>>>>> ececda537b6916427f44ffa2c12b03b8932ea548
+  { id: 'co2', name: 'Arka Pratim Das', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Arka.jpeg' },
+  { id: 'co3', name: 'Shruti Gupta ', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Shruti.jpg' },
+  { id: 'co4', name: 'Sayantan Roy', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Sayantan.jpg' },
 
   // Core Team
   { id: 'ct1', name: 'Arnashree De', role: 'TECHNICAL HEAD', category: 'core', avatarIcon: '👤', image: '/Arnashree.jpg' },
