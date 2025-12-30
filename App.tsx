@@ -645,7 +645,7 @@ const App: React.FC = () => {
 
                 <div className="p-8 border-t border-white/10" style={{ backgroundColor: '#000000' }}>
                   <p className="text-[10px] text-slate-500 font-mono-tech tracking-widest uppercase mb-1">Organized by</p>
-                  <p className="text-xs text-white font-bold uppercase tracking-widest">IE(I) Student Chapter</p>
+                  <p className="text-xs text-white font-bold uppercase tracking-widest">IE(I) Student Chapter, IT, RCCIIT</p>
                 </div>
               </div>
             </div>
@@ -678,7 +678,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="flex gap-10 justify-center md:justify-end text-slate-400 uppercase text-xs font-bold tracking-widest">
-                <a href="https://www.instagram.com/ieisc_rcciit?igsh=ZjZydjNxMnJ1cm5h" 
+                <a href="https://www.instagram.com/ieisc_rcciit?igsh=eG5tbzg1bmp1cTA4" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-sky-400 transition-all"
