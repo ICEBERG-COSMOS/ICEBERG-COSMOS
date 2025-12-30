@@ -16,11 +16,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
   
   // Co-Organizers
   { id: 'co1', name: 'Subhadeb Mitra', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
-  { id: 'co2', name: 'Santanu Shrivastava', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  
   { id: 'co3', name: 'Arka Pratim Das', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤', image: '/Arka.jpeg' },
   { id: 'co4', name: 'Shruti Gupta ', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
   { id: 'co5', name: 'Sayantan Roy', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
-  { id: 'co6', name: 'Md Talha Ali', role: 'Event Management', category: 'co-organizers', avatarIcon: '👤' },
+  
 
   // Core Team
   { id: 'ct1', name: 'Arnashree De', role: 'TECHNICAL HEAD', category: 'core', avatarIcon: '👤'},
