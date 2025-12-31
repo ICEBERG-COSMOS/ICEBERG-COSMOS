@@ -1,4 +1,4 @@
-export type TeamTab = 'organizers' | 'co-organizers' | 'core';
+export type TeamTab = 'organizers' | 'co-organizers' | 'core' | 'mentors';
 
 export interface TeamMember {
   id: string;
@@ -10,6 +10,11 @@ export interface TeamMember {
 }
 
 export const TEAM_MEMBERS: TeamMember[] = [
+  { id: 'm1', name: 'Anurag Ganguly', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor1.jpeg' },
+  { id: 'm2', name: 'Ankit Das', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor2.jpeg' },
+  { id: 'm3', name: 'Aniruddha Pal', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor3.jpeg' },
+  { id: 'm4', name: 'Amit Roy', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor4.jpeg' },
+  { id: 'm5', name: 'Priyanshu Dutta', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor5.jpeg' },
   // Organizers
   { id: 'o1', name: 'Debjoy Sarkar', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Debjoy.jpeg' },
   { id: 'o2', name: 'Vageesha Kriti', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Vageesha.jpeg' },
@@ -29,14 +34,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
   { id: 'ct6', name: 'Soumik Bag', role: 'Management Member', category: 'core', avatarIcon: '👤', image: '/Soumik.jpg' },
   { id: 'ct7', name: 'Md Faizan ', role: 'Tech Member', category: 'core', avatarIcon: '👤', image: '/Faizan.jpg' },
   { id: 'ct8', name: 'Upayan Sarkar', role: 'IE(I) Member', category: 'core', avatarIcon: '👤', image: '/Upayan.jpg' },
-  { id: 'ct9', name: 'Md Talha Ali', role: 'Management Member', category: 'core', avatarIcon: '👤', image: '/Talha.jpeg' },
+  { id: 'ct9', name: 'Md Talha Ali', role: 'Event Logistics', category: 'core', avatarIcon: '👤', image: '/Talha.jpeg' },
   { id: 'ct10', name: 'Santanu Shrivastava', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Santanu.jpg' },
   { id: 'ct11', name: 'Srijan Das', role: 'Commitee Member', category: 'core', avatarIcon: '👤', image: '/Srijan.jpg' },
   { id: 'ct12', name: 'Prince Bharti', role: 'Tech Member', category: 'core', avatarIcon: '👤', image: '/Prince.jpg' },
   { id: 'ct13', name: 'Surajit Nayak', role: 'Commitee Member', category: 'core', avatarIcon: '👤', image: '/Surajit.jpeg' },
   { id: 'ct14', name: 'Trisha Chakrabarti', role: 'IE(I) Member', category: 'core', avatarIcon: '👤', image: '/Trisha.jpg' },
   { id: 'ct15', name: 'Ayesha Nazmun Nahar', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Ayesha.jpg' },
-  { id: 'ct16', name: 'Eshika Saha', role: 'Graphics Member', category:'core' , avatarIcon:'👤' , image:'/Eshika.JPG' },
-  { id: 'ct17', name: 'Srijoyni Mukherjee', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Srijoyni.jpeg' },
-  { id: 'ct18', name: 'Ankan Paul', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Ankan.png' },
+  { id: 'ct16', name: 'Eshika Saha', role: 'Graphics Associate', category:'core' , avatarIcon:'👤' , image:'/Eshika.JPG' },
+  { id: 'ct17', name: 'Srijoyni Mukherjee', role: 'Graphics Associate', category: 'core', avatarIcon: '👤', image: '/Srijoyni.jpeg' },
+  { id: 'ct18', name: 'Ankan Paul', role: 'Graphics Associate', category: 'core', avatarIcon: '👤', image: '/Ankan.png' },
 ];
