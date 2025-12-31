@@ -612,6 +612,7 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <nav className="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/10 bg-slate-950/80">
+            {/* Logo Section */}
             <div className="flex items-center gap-3 cursor-pointer z-[70]" onClick={() => { setView('home'); setIsMenuOpen(false); }}>
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-sky-500/20 shadow-lg">
                 <LogoImage src="ICEBERG.jpeg" />
@@ -621,6 +622,7 @@ const App: React.FC = () => {
               </span>
             </div>
 
+            {/* Desktop Navigation */}
             <div className="hidden md:flex gap-10 items-center text-sm font-stylish font-bold tracking-widest ml-auto">
               {['home', 'about', 'events', 'team', 'mission'].map((item) => (
                 <button
@@ -631,8 +633,19 @@ const App: React.FC = () => {
                   {item}
                 </button>
               ))}
+
+              {/* Glowing "Official Website" Button */}
+              <a
+                href="https://ie-i-scrcciit.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-xl bg-sky-500/10 border border-sky-400/50 text-sky-400 uppercase text-[11px] tracking-[0.2em] hover:bg-sky-500 hover:text-white hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300"
+              >
+                Official Website
+              </a>
             </div>
 
+            {/* Mobile Hamburger Toggle */}
             <button
               className="md:hidden z-[70] flex flex-col gap-1.5 justify-center items-center w-11 h-11 border border-white/20 rounded-xl bg-slate-900 shadow-2xl"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -642,6 +655,7 @@ const App: React.FC = () => {
               <div className={`h-0.5 w-5 bg-sky-400 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
             </button>
 
+            {/* Mobile Menu Drawer */}
             <div className={`fixed inset-0 z-[60] md:hidden transition-all duration-500 ${isMenuOpen ? 'visible' : 'invisible'}`}>
               <div className={`absolute inset-0 bg-black/80 transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`} onClick={() => setIsMenuOpen(false)} />
 
@@ -668,6 +682,16 @@ const App: React.FC = () => {
                       {item}
                     </button>
                   ))}
+
+                  {/* Mobile Call to Action Link */}
+                  <a
+                    href="https://ie-i-scrcciit.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 p-4 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 text-center font-stylish font-bold uppercase tracking-widest text-sm"
+                  >
+                    Official Website ↗
+                  </a>
                 </div>
 
                 <div className="p-8 border-t border-white/10" style={{ backgroundColor: '#000000' }}>
