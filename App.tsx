@@ -480,7 +480,6 @@ const App: React.FC = () => {
 
   const renderTeamView = () => {
     const allFilteredMembers = TEAM_MEMBERS.filter(m => m.category === activeTeamTab);
-    const MEMBERS_PER_PAGE = 8;
     const totalPages = Math.ceil(allFilteredMembers.length / MEMBERS_PER_PAGE);
     const startIndex = (teamPage - 1) * MEMBERS_PER_PAGE;
     const currentMembers = allFilteredMembers.slice(startIndex, startIndex + MEMBERS_PER_PAGE);
@@ -491,8 +490,11 @@ const App: React.FC = () => {
           <h2 className="text-5xl md:text-9xl font-stylish font-black mb-4 tracking-tighter uppercase italic text-white glow-text">TEAM</h2>
           <div className="h-1 w-20 md:w-24 bg-sky-500 mx-auto rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
         </div>
+
+        {/* Navigation Tabs - Mentors Removed */}
         <div className="flex md:justify-center gap-4 md:gap-8 mb-16 overflow-x-auto md:overflow-visible pb-4 md:pb-0 px-4">
-          {(['mentors', 'organizers', 'co-organizers', 'core'] as TeamTab[]).map((tab) => (
+          {/* Only mapping Organizers, Co-organizers, and Core */}
+          {(['organizers', 'co-organizers', 'core'] as TeamTab[]).map((tab) => (
             <button
               key={tab}
               onClick={() => { setActiveTeamTab(tab); setTeamPage(1); }}
@@ -505,97 +507,51 @@ const App: React.FC = () => {
             </button>
           ))}
         </div>
-        {activeTeamTab === 'mentors' ? (
-          /* MENTOR VERTICAL LAYOUT */
-          <div className="animate-in fade-in duration-700">
-            {/* Heading for Mentors */}
-            <div className="text-center mb-12 max-w-3xl mx-auto px-4">
-              <h3 className="text-xl md:text-3xl font-stylish font-bold text-white tracking-tight leading-snug">
-                Mentors for <span className="text-sky-400">ICEBERG HACKS:</span> <br className="md:hidden" />
-                Freshers Edition 2025-26
-              </h3>
-              <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-sky-500 to-transparent mx-auto mt-4" />
-            </div>
 
-            <div className="flex flex-col gap-6 max-w-4xl mx-auto mb-32 px-4">
-              {allFilteredMembers.map((mentor) => (
-                <div
-                  key={mentor.id}
-                  className="group glass-card rounded-[2rem] border border-white/10 hover:border-sky-500/50 transition-all duration-500 flex flex-row items-center overflow-hidden h-44 md:h-64 shadow-[0_0_30px_rgba(0,0,0,0.3)]"
-                >
-                  <div className="w-2/5 md:w-1/3 h-full bg-slate-900 overflow-hidden border-r border-white/10 relative">
-                    {mentor.image ? (
-                      <img
-                        src={mentor.image}
-                        alt={mentor.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-6xl bg-sky-500/5 text-slate-700">
-                        {mentor.avatarIcon || '👤'}
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-950/20" />
-                  </div>
-                  <div className="flex-1 px-8 md:px-16">
-                    <h4 className="text-2xl md:text-5xl font-bold text-white group-hover:text-sky-400 transition-colors uppercase tracking-tighter italic leading-none">
-                      {mentor.name}
-                    </h4>
-                    <div className="mt-4 flex items-center gap-3">
-                      <div className="h-[1px] w-8 bg-sky-500/50" />
-                      <p className="text-sky-400/70 font-mono-tech text-[10px] md:text-xs uppercase tracking-[0.4em]">
-                        {mentor.role}
-                      </p>
-                    </div>
-                  </div>
+        {/* Grid Layout - Standard for all remaining categories */}
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 mb-16">
+            {currentMembers.map((member) => (
+              <div
+                key={member.id}
+                className="group glass-card rounded-3xl p-8 border border-white/10 hover:border-sky-500/50 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+              >
+                <div className="w-48 h-48 rounded-3xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-6xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  ) : (
+                    <span className="flex items-center justify-center">{member.avatarIcon || '👤'}</span>
+                  )}
                 </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 mb-16">
-              {currentMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="group glass-card rounded-3xl p-8 border border-white/10 hover:border-sky-500/50 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
-                >
-                  <div className="w-48 h-48 rounded-3xl bg-slate-900 border-2 border-dashed border-sky-500/30 flex items-center justify-center text-6xl mb-6 overflow-hidden transition-all duration-500 group-hover:border-sky-500 group-hover:bg-sky-500/10 shadow-inner">
-                    {member.image ? (
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    ) : (
-                      <span className="flex items-center justify-center">{member.avatarIcon || '👤'}</span>
-                    )}
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">{member.name}</h4>
-                  <p className="text-slate-400 font-mono-tech text-xs uppercase tracking-widest group-hover:text-slate-200 transition-colors">{member.role}</p>
-                </div>
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-6 mb-32">
-                <button
-                  disabled={teamPage === 1}
-                  onClick={() => setTeamPage(p => p - 1)}
-                  className="p-4 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 hover:bg-sky-500/20 transition-all"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
-                </button>
-                <span className="text-slate-400 font-mono-tech uppercase text-xs tracking-widest">
-                  Page <span className="text-white">{teamPage}</span> of {totalPages}
-                </span>
-                <button
-                  disabled={teamPage === totalPages}
-                  onClick={() => setTeamPage(p => p + 1)}
-                  className="p-4 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 hover:bg-sky-500/20 transition-all"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
-                </button>
+                <h4 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">{member.name}</h4>
+                <p className="text-slate-400 font-mono-tech text-xs uppercase tracking-widest group-hover:text-slate-200 transition-colors">{member.role}</p>
               </div>
-            )}
-          </>
-        )}
+            ))}
+          </div>
+
+          {/* Pagination Controls - Essential for the 20 Organizer members */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-6 mb-32">
+              <button
+                disabled={teamPage === 1}
+                onClick={() => setTeamPage(p => p - 1)}
+                className="p-4 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 hover:bg-sky-500/20 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+              </button>
+              <span className="text-slate-400 font-mono-tech uppercase text-xs tracking-widest">
+                Page <span className="text-white">{teamPage}</span> of {totalPages}
+              </span>
+              <button
+                disabled={teamPage === totalPages}
+                onClick={() => setTeamPage(p => p + 1)}
+                className="p-4 rounded-full bg-white/5 border border-white/10 text-white disabled:opacity-20 hover:bg-sky-500/20 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+              </button>
+            </div>
+          )}
+        </>
       </div>
     );
   };

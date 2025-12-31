@@ -1,4 +1,4 @@
-export type TeamTab = 'organizers' | 'co-organizers' | 'core' | 'mentors';
+export type TeamTab = 'organizers' | 'co-organizers' | 'core' ;
 
 export interface TeamMember {
   id: string;
@@ -10,12 +10,6 @@ export interface TeamMember {
 }
 
 export const TEAM_MEMBERS: TeamMember[] = [
-  // Mentors
-  { id: 'm1', name: 'Anurag Ganguly', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor1.jpeg' },
-  { id: 'm2', name: 'Ankit Das', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor2.jpeg' },
-  { id: 'm3', name: 'Aniruddha Pal', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor3.jpeg' },
-  { id: 'm4', name: 'Amit Roy', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor4.jpeg' },
-  { id: 'm5', name: 'Priyanshu Dutta', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor5.jpeg' },
   // Organizers
   { id: 'o1', name: 'Debjoy Sarkar', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Debjoy.jpeg' },
   { id: 'o2', name: 'Vageesha Kriti', role: 'IE(I) CONVENOR', category: 'organizers', avatarIcon: '👤', image: '/Vageesha.jpeg' },
