@@ -10,6 +10,7 @@ export interface TeamMember {
 }
 
 export const TEAM_MEMBERS: TeamMember[] = [
+  // Mentors
   { id: 'm1', name: 'Anurag Ganguly', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor1.jpeg' },
   { id: 'm2', name: 'Ankit Das', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor2.jpeg' },
   { id: 'm3', name: 'Aniruddha Pal', role: 'Mentor', category: 'mentors', avatarIcon: '👤', image: '/Mentor3.jpeg' },
@@ -37,7 +38,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   { id: 'ct9', name: 'Md Talha Ali', role: 'Event Logistics', category: 'core', avatarIcon: '👤', image: '/Talha.jpeg' },
   { id: 'ct10', name: 'Santanu Shrivastava', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Santanu.jpg' },
   { id: 'ct11', name: 'Srijan Das', role: 'Commitee Member', category: 'core', avatarIcon: '👤', image: '/Srijan.jpg' },
-  { id: 'ct12', name: 'Prince Bharti', role: 'Tech Member', category: 'core', avatarIcon: '👤', image: '/Prince.jpg' },
+  { id: 'ct12', name: 'Prince Bharti', role: 'Tech Member', category: 'core', avatarIcon: '👤', image: '/Prince.png' },
   { id: 'ct13', name: 'Surajit Nayak', role: 'Commitee Member', category: 'core', avatarIcon: '👤', image: '/Surajit.jpeg' },
   { id: 'ct14', name: 'Trisha Chakrabarti', role: 'IE(I) Member', category: 'core', avatarIcon: '👤', image: '/Trisha.jpg' },
   { id: 'ct15', name: 'Ayesha Nazmun Nahar', role: 'Graphics Member', category: 'core', avatarIcon: '👤', image: '/Ayesha.jpg' },

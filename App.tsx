@@ -236,6 +236,39 @@ const SplashScreen: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
   );
 };
 
+const FloatingRedirect: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
+  if (!isVisible) return null;
+
+  return (
+    <a 
+      href="https://ie-i-scrcciit.vercel.app" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-[200] group animate-in fade-in zoom-in duration-1000"
+    >
+      <div className="relative">
+        <div className="absolute inset-0 bg-sky-500 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500 animate-pulse" />
+        
+        <div className="relative w-14 h-14 md:w-16 md:h-16 bg-slate-900/80 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:border-sky-400 group-hover:-translate-y-2 animate-float">
+          <img 
+            src="/IEI.jpeg" 
+            alt="Redirect"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:rotate-12 transition-transform duration-500"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/1006/1006771.png";
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+        </div>
+
+        <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1 bg-sky-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-sky-400 shadow-lg">
+          Visit Site
+        </span>
+      </div>
+    </a>
+  );
+};
+
 const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState(true);
   const [view, setView] = useState<ViewType>('home');
@@ -813,6 +846,18 @@ const App: React.FC = () => {
           50% { opacity: 0.7; border-color: rgba(56, 189, 248, 0.4); }
         }
       `}</style>
+      <style>{`
+        @keyframes float {
+          0% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(2deg); }
+          100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
+      
+      <FloatingRedirect isVisible={!showSplash} />
     </div>
   );
 };
