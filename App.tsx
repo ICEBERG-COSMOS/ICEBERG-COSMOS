@@ -120,7 +120,7 @@ const Snowfall: React.FC = () => {
 
 const LogoImage: React.FC<{ className?: string; src?: string }> = ({ 
   className = "w-full h-full object-contain p-0",
-  src = "/IEI.jpeg"
+  src = "https://ie-i-scrcciit.vercel.app/images/Official_ieircciit_Logo.png"
 }) => {
   return (
     <img 
@@ -150,7 +150,7 @@ const TriangularLogos: React.FC<{ className?: string }> = ({ className = "" }) =
       />
     </svg>
     <div className="absolute top-0 left-1/2 -translate-x-1/2">
-      <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="/IEI.jpeg" />
+      <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="https://ie-i-scrcciit.vercel.app/images/Official_ieircciit_Logo.png" />
     </div>
     <div className="absolute bottom-0 left-0">
       <LogoSlot size="w-9 h-9 md:w-12 md:h-12" src="/IIC.jpeg" />
@@ -251,7 +251,7 @@ const FloatingRedirect: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
         
         <div className="relative w-14 h-14 md:w-16 md:h-16 bg-slate-900/80 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:border-sky-400 group-hover:-translate-y-2 animate-float">
           <img 
-            src="/IEI.jpeg" 
+            src="https://ie-i-scrcciit.vercel.app/images/Official_ieircciit_Logo.png" 
             alt="Redirect"
             className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:rotate-12 transition-transform duration-500"
             onError={(e) => {
